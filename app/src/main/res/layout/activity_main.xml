@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.javierizquierdovera.phlipshue.connectandroidapptoswitchphlipshue.MainActivity">
+    tools:context="com.philips.lighting.hue.demo.ConnectAndroidAPPtoSwitchPhlipsHue.com.javierizquierdovera.lighting.hue.demo.ConnectAndroidAPPtoSwitchPhlipsHue.MainActivity"
+    android:padding="16dp"
+    android:background="#ffffff">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingBottom="8dp"
+        tools:text="Press the link button to authenticate."/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/bridge_ip_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text=" Bridge IP:192.168.1.1:600026"
+        android:paddingBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/pushlink_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pushlink_image"/>
+
+    <ListView
+        android:id="@+id/bridge_discovery_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/randomize_lights_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Randomize lights"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/bridge_discovery_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Re-run bridge discovery" />
+
+</LinearLayout>
