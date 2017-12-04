@@ -1,4 +1,4 @@
-# Android APP of connection to Philips Hue
+# Android APP for connect to Philips Hue
 
 This project is an introduction to connect Android to Philips Hue. It includes:
 * FaçadeHue
